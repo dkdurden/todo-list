@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #322d31;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: "Roboto Mono", monospace;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn {
+  padding: 0.5rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn--green {
+  background-color: #62a86a;
+}
+
+.form__input {
+  padding: 1rem;
+  font-size: 1em;
+}
+
+.todo {
+  width: 600px;
+  height: 500px;
+  font-size: 1.6rem;
+}
+
+.todo__header {
+  position: relative;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 4rem;
+  height: 50px;
+  background-color: #7b7478;
+}
+
+.todo__header.flex {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.todo__header form {
+  display: none;
+}
+
+.todo__h1 {
+  color: #f5f5f5;
+  text-transform: capitalize;
+}
+
+.todo__expand-btn, .todo__submit-btn {
+  padding: 0.75rem;
+  border-radius: 5px;
+}
+
+.todo__expand-btn:hover, .todo__submit-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.todo__submit-btn {
+  color: #f5f5f5;
+}
+
+.todo__main {
+  height: 100%;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.todo__main.flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.todo__list {
+  color: #f5f5f5;
+  overflow: auto;
+}
+
+.todo__prompt {
+  color: #322d31;
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.todo__form-main {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.todo__filter-input {
+  width: 100%;
+  padding: 1.25rem;
+}
+
+.todo__item {
+  padding: 1rem;
+  width: 100%;
+  overflow: de;
+}
+
+.todo__item.flex {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.todo__item-name {
+  padding: 0.5rem;
+  border: 0;
+  text-align: left;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  background-color: #9699a5;
+  color: #f5f5f5;
+  width: 100%;
+}
+
+.todo__item-name--complete {
+  background: #62a86a;
+}
+
+.todo__item-name:hover {
+  background-color: #62a86a;
+}
+
+.todo__btn-remove {
+  font-size: 1.5em;
+  padding: 0.5rem 1rem;
+  background-color: #f44336;
+  color: #f5f5f5;
+}
+
+.todo__btn-remove:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.color-success {
+  color: #62a86a;
+}
+
+.color-danger {
+  color: #f44336;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: initial;
+    height: initial;
+  }
+  .todo {
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+  }
+  .todo__header {
+    height: initial;
+    padding: 2rem;
+  }
+  .todo__header.flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .todo__h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .todo__header-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .todo__expand-btn {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    padding: 0.5rem;
+  }
+  .todo__submit-btn {
+    padding: 0.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

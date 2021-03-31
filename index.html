@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <main class="todo">
+      <header class="todo__header flex">
+        <h1 class="todo__h1">todo list</h1>
+        <div class="todo__header-div">
+          <form class="form--absolute" onsubmit="addItem(event)">
+            <label for="#add-input" class="visuallyhidden">Add a Todo:</label>
+            <input
+              id="add-input"
+              class="form__input"
+              type="text"
+              placeholder="Add todo..."
+            />
+            <button
+              class="btn btn--green todo__submit-btn"
+              onclick=""
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+          <button class="btn todo__expand-btn" onclick="showForm(this)">
+            <i class="fas fa-plus fa-2x color-success"></i>
+          </button>
+        </div>
+      </header>
+      <section class="todo__main flex">
+        <form class="form todo__form-main" onsubmit="preventSubmit(event)">
+          <label for="#filter-input" class="visuallyhidden">Filter List:</label>
+          <input
+            id="filter-input"
+            class="form__input todo__filter-input"
+            type="text"
+            placeholder="Filter the list..."
+            oninput="filterItems(event)"
+          />
+        </form>
+        <section id="todo-list" class="todo__list"><</section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

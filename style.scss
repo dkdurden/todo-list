@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+$font-light: #f5f5f5;
+$bg-primary: #322d31;
+$bg-secondary: #7b7478;
+$bg-light: #9699a5;
+$color-success: #62a86a;
+$color-danger: #f44336;
+
+$font-family: 'Roboto Mono', monospace;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $bg-primary;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: $font-family;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.5rem;
+  border: 0;
+  cursor: pointer;
+
+  &--green {
+    background-color: $color-success;
+  }
+}
+
+.form {
+  &__input {
+    padding: 1rem;
+    font-size: 1em;
+  }
+}
+
+.todo {
+  width: 600px;
+  height: 500px;
+  font-size: 1.6rem;
+
+  &__header {
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 4rem;
+    height: 50px;
+    background-color: $bg-secondary;
+    &.flex {
+      justify-content: space-between;
+    }
+    form {
+      display: none;
+    }
+  }
+  &__h1 {
+    color: $font-light;
+
+    text-transform: capitalize;
+  }
+
+  &__expand-btn,
+  &__submit-btn {
+    padding: 0.75rem;
+    border-radius: 5px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__submit-btn {
+    color: $font-light;
+  }
+
+  &__main {
+    height: 100%;
+    padding: 1rem;
+    background-color: $font-light;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    &.flex {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+  }
+  &__list {
+    color: $font-light;
+    overflow: auto;
+  }
+  &__prompt {
+    color: $bg-primary;
+    text-align: center;
+    margin: 5rem 0;
+  }
+  &__form-main {
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+  }
+  &__filter-input {
+    width: 100%;
+    padding: 1.25rem;
+  }
+  &__item {
+    padding: 1rem;
+    width: 100%;
+    overflow: de;
+    &.flex {
+      justify-content: space-between;
+    }
+  }
+
+  &__item-name {
+    padding: 0.5rem;
+    border: 0;
+    text-align: left;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    background-color: $bg-light;
+    color: $font-light;
+    width: 100%;
+
+    &--complete {
+      background: $color-success;
+    }
+
+    &:hover {
+      background-color: $color-success;
+    }
+  }
+
+  &__btn-remove {
+    font-size: 1.5em;
+    padding: 0.5rem 1rem;
+    background-color: $color-danger;
+    color: $font-light;
+
+    &:hover {
+      transform: scale(1.25);
+    }
+  }
+}
+
+.color-success {
+  color: $color-success;
+}
+
+.color-danger {
+  color: $color-danger;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: initial;
+    height: initial;
+  }
+
+  .todo {
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+
+    &__header {
+      height: initial;
+      padding: 2rem;
+
+      &.flex {
+        flex-direction: column;
+      }
+    }
+    &__h1 {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .todo {
+    &__header-div {
+      display: flex;
+      flex-direction: column;
+    }
+    &__expand-btn {
+      align-self: flex-end;
+      padding: 0.5rem;
+    }
+    &__submit-btn {
+      padding: 0.5rem;
+    }
+  }
+}
